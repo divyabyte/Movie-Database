@@ -18,7 +18,6 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.upcoming_movies_fragment.*
 import org.kodein.di.KodeinAware
-import org.kodein.di.android.x.closestKodein
 import org.kodein.di.android.x.kodein
 import org.kodein.di.generic.instance
 
@@ -61,9 +60,7 @@ class UpcomingMoviesFragment : Fragment(), KodeinAware {
             setHasFixedSize(true)
             adapter = mAdapter
         }
-
     }
-
 
     private fun List<Upcoming>.toUpcomingItem() : List<UpcomingItem>{
         return this.map {
